@@ -26,3 +26,29 @@ export interface Character {
   tags: CharacterTag[];
 }
 
+export interface CharacterList {
+  name: string;
+  image: string;
+  tags: string[];
+  power: number;
+  mobility: number;
+  technique: number;
+  survivability: number;
+  energy: number;
+}
+
+export interface GlobalContext {
+  allTags: string[];
+  selectedTags: string[];
+  selectedCharacters: Character[];
+  characters: Character[];
+  serverError: string;
+  characterList: CharacterList[];
+  characterListForSearch: CharacterList[];
+  addTag: (tag: string) => void;
+  removeTag: (tag: string) => void;
+  clearAllSelectedTags: () => void;
+  addSelectedCharacter: (name: string) => boolean;
+  removeSelectedCharacter: (name: string) => boolean;
+  filterCharacterListBySearch: (value: string) => void;
+}
