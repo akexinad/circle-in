@@ -6,6 +6,8 @@ import Tags from "./components/Tags/Tags";
 import Title from "./components/Title/Title";
 import { GlobalContext } from "./context/GlobalContext";
 import type { AbilityName } from "./types";
+import SelectedCharacters from "./components/SelectedCharacters/SelectedCharacters";
+
 function App() {
   const { allTags } = useContext(GlobalContext);
 
@@ -25,6 +27,7 @@ function App() {
       }}
     >
       <Title />
+      <SelectedCharacters />
       <Abilities abilityAverages={mockAbilityAverages} />
       <Tags tags={allTags} />
       <CharacterList />
