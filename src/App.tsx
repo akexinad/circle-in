@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import "./App.css";
 import Abilities from "./components/Abilities/Abilities";
+import CharacterList from "./components/CharacterList/CharacterList";
 import Title from "./components/Title/Title";
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
     >
       <Title />
       <Abilities abilityAverages={mockAbilityAverages} />
+      <CharacterList />
     </main>
   );
 }
